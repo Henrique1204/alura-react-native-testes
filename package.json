@@ -9,7 +9,7 @@
     "web": "expo start --web",
     "eject": "expo eject",
     "api": "json-server --host 192.168.10.28 --watch db.json",
-    "test": "jest --coverage=false",
+    "test": "jest --watch --coverage=false",
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
