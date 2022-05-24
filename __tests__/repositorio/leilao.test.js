@@ -38,7 +38,7 @@ describe("Repositorio Leilao", () => {
       expect(apiLeiloes.get).toHaveBeenCalledWith("/leiloes");
     });
 
-    it("Deve retornar uma lista de leiloes vazias.", async () => {
+    it("Deve retornar uma lista de leiloes vazia.", async () => {
       apiLeiloes.get.mockImplementation(mockRequisicao(undefined, false));
 
       const leileos = await obtemLeiloes();
@@ -59,7 +59,7 @@ describe("Repositorio Leilao", () => {
       expect(leilao).toEqual(mockLeiloes[0]);
 
       expect(apiLeiloes.get).toHaveBeenCalledTimes(1);
-      expect(apiLeiloes.get).toHaveBeenCalledWith("/leiloes/1");
+      expect(apiLeiloes.get).toHaveBeenCalledWith(`/leiloes/${mockId}`);
     });
 
     it("Deve retornar um objeto vazio.", async () => {
